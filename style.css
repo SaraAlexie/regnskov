@@ -1,0 +1,248 @@
+/* HTML, BODY OG TEKST*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #A6D964;
+}
+
+main{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+}
+
+h2{
+    font-size: 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+}
+
+h3{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+}
+
+p{
+    font-size: 110%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+/*HEADER OG MENU*/
+
+.banner{
+    min-height: 200px;
+    justify-content: center;
+    position: relative;    
+    overflow: hidden;
+}
+
+.burger-check{
+    display: none;
+}
+
+.burger-label{
+    width: 35px;
+    display: block;
+    padding: 5px;
+}
+
+.burger{
+    display: block;
+    height: 4px;
+    background: #2BA65C;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.menu-items{
+    list-style: none;
+    padding: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s;
+    background-color: #2BA65C;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.menu-items li{
+    margin-bottom: 10px;
+}
+
+.menu-item{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu-item:hover{
+    border-bottom: 2px solid;
+}
+
+a:active{
+    color: white;
+}
+
+.burger-check:checked ~.menu-items{
+    transform: scaleY(1);
+}
+
+.burger-check:checked ~.burger-label .line-2{
+    display: none;
+}
+.burger-check:checked ~.burger-label .line-1{
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+}
+.burger-check:checked ~.burger-label .line-3{
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+
+}
+
+/*MAIN INDHOLD*/
+
+.center-text{
+    text-align: center;
+}
+
+.main-background{
+    background-color: #A6D964;
+    padding: 15px;
+}
+
+.gallery-background{
+    max-width: 1050px;
+    background-color: #2BA65C;
+    padding: 10px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.padding-img{
+    padding-top: 15px;
+}
+
+.list-items{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 110%;
+}
+
+.fakta-boks{
+    border: solid black;
+    background-color: #2BA65C;
+    padding: 10px;
+}
+
+.fakta-boks ul{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ds-aside{
+    padding: 10px;
+}
+
+.ds-aside a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 135%;
+}
+
+
+/*FOOTER*/
+
+footer{
+    background-color: #2BA65C;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.form-font{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sect-1{
+    margin-left: 250px;
+}
+
+.letter-form{
+    margin-right: 250px;
+}
+
+/*FOR DESKTOP*/
+
+@media screen and (min-width: 800px){
+
+    body{
+        background-color: white;
+    }
+
+    /*Header og menu*/
+
+    .banner{
+        min-height: 200px;
+    }
+
+    .burger-label{
+        display: none;
+    }
+
+    .main-menu{
+        background-color: #2BA65C;
+    }
+
+    .menu-items{
+        position: static;
+        transform: scaleY(1);
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-items li{
+        margin-bottom: 5px;
+    }
+
+    .menu-item{
+        margin-right: 40px;
+        margin-left: 40px;
+        font-size: 135%;
+    }
+
+    /*Main indhold*/
+
+    .flex{
+        display: flex;
+    }
+
+    .to-bokse{
+        justify-content: space-between;
+    }
+
+    /*Footer*/
+    
+    footer{
+        min-height: 100px;
+    }
+
+}
